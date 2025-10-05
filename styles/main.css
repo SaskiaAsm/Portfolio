@@ -1,0 +1,172 @@
+:root {
+    --primary-blue: #2F80E4;
+    --secondary-blue: #6DA0E1;
+    --purple: #5B61B2;
+    --cream: #FFF2DF;
+    --pink: #DEC1DB;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Zalando Sans";
+    color: #3C3C3C;
+}
+
+
+.jomhuria-regular {
+    font-family: "Jomhuria", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.zalando-sans {
+    font-family: "Zalando Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: "Jomhuria";
+    letter-spacing: 0.7rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 15.5rem;
+    line-height: 100px;
+}
+
+h2 {
+    font-size: 10rem;
+    margin: 0;
+}
+
+h3 {
+    font-size: 6rem;
+    line-height: 4rem;
+    letter-spacing: 0.3rem;
+
+}
+
+h4 {
+    font-size: 3rem;
+    line-height: 4rem;
+    letter-spacing: 0.1rem;
+}
+
+h5 {
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.fluid-container {
+    padding: 0 10rem;
+    margin: 15rem 0;
+}
+
+.grid {
+    display: grid;
+}
+
+a {
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:before {
+    content: '';
+    background: var(--cream);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    background-position: 0;
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+button {
+    background-color: var(--cream);
+    color: var(--primary-blue);
+    width: 280px;
+    height: 65px;
+    border-color: var(--cream);
+    border-radius: 50px;
+    font-weight: 800;
+
+    border: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    font-size: 1rem;
+}
+
+li {
+    padding-inline-start: 0.5rem;
+}
+
+
+li::marker {
+    content: '\2726';
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+
+    /* Smaller base for smaller screens */
+    html {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 10rem;
+    }
+
+    h2 {
+        font-size: 8rem;
+    }
+
+    h3 {
+        font-size: 5rem;
+    }
+
+    .grid {
+        display: block;
+    }
+
+    .fluid-container {
+        padding: 0 2rem;
+        margin: 6rem 0;
+    }
+}
+
