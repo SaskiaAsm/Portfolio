@@ -34,19 +34,19 @@
 /* ########################### INTRODUCTION SECTION ################################## */
 
 .introduction {
-    position: relative;
     margin-top: 0 !important;
+    grid-template-rows: auto 1fr;
 
     .introduction__img {
-        position: absolute;
         z-index: -1;
         top: -5%;
         left: 0;
-        width: 100%;
+        width: 100vw;
     }
 
     .introduction__about-me {
-        padding-top: 15rem;
+        margin-top: 0;
+        grid-row-start: 2;
         grid-template-columns: 1fr 526px 1fr 420px 1fr;
     }
 
@@ -103,6 +103,7 @@
 
         .introduction__text {
             padding-bottom: 5rem;
+
             button {
                 margin: 0 !important;
             }
@@ -240,6 +241,8 @@
 .projects {
     color: var(--cream);
     position: relative;
+    background-color: var(--purple);
+    overflow: hidden;
 
     h2 {
         color: var(--pink);
@@ -248,14 +251,20 @@
     >img {
         position: absolute;
         width: 100%;
-        z-index: -1;
-        bottom: 0;
+        height: auto;
+        z-index: 1;
+        top: 0;
+        overflow: hidden;
+        background-color: #fff;
     }
 
-
     .projects__description {
+        >div {
+            z-index: 1;
+        }
+
         margin-bottom: 0 !important;
-        padding-bottom: 3rem;
+        padding-bottom: 10rem;
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -273,10 +282,7 @@
 
 @media (max-width: 768px) {
     .projects {
-        > img {
-            height: 100%;
-            width: auto;
-        }
+        background-color: var(--purple);
     }
 }
 
